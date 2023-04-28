@@ -1,0 +1,521 @@
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(21, 110, 194);
+  min-width: 700px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 5px;
+  background: linear-gradient(to right, black, black, rgb(21, 110, 194), black);
+  box-shadow: 1px 1px 10px;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  gap: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: rgb(218, 218, 218);
+  transition: 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.nav-items a:hover {
+  color: white;
+  box-shadow: 2px 2px 8px black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-items li {
+  transition: 0.5s ease-in-out;
+}
+
+.nav-items li:hover {
+  transform: scale(1.05);
+}
+
+.video-div {
+  position: relative;
+  height: 100vh;
+}
+
+.video-div video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-heading {
+  position: absolute;
+  font-family: "Poppins";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 7vw;
+}
+
+.video-heading p {
+  margin: 0;
+}
+
+.footer-down {
+  background-color: rgb(37, 37, 37);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.footer-down ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 10px;
+}
+
+.footer-down li {
+  transition: 0.4s ease-in-out;
+}
+
+.footer-down li:hover {
+  transform: scale(1.05);
+}
+
+.footer-down a {
+  text-decoration: none;
+  color: rgb(214, 212, 212);
+  font-family: "Poppins";
+  font-size: 14px;
+  transition: 0.4s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.footer-down a:hover {
+  box-shadow: 2px 4px 8px black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-down p {
+  margin: 0;
+  padding: 10px 20px;
+  font-family: "Poppins";
+  color: rgb(185, 185, 185);
+  font-size: 13px;
+}
+
+.footer-up {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.part1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.part1 img {
+  height: 35px;
+  padding: 5px;
+  width: 95px;
+}
+
+.part1 p {
+  color: white;
+  font-family: "poppins";
+  margin: 0;
+  font-size: 13px;
+}
+
+.part2,
+.part3 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.part2 p,
+.part3 p {
+  color: white;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "poppins";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.part2 ul,
+.part3 ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+
+.part2 a,
+.part3 a {
+  text-decoration: none;
+  color: rgb(184, 183, 183);
+  font-family: "Poppins";
+  font-size: 13px;
+  transition: 0.4s ease-in-out;
+}
+
+.part2 a:hover,
+.part3 a:hover {
+  color: white;
+}
+
+.part2 li,
+.part3 li {
+  transition: 0.5s ease-in-out;
+}
+
+.part2 li:hover,
+.part3 li:hover {
+  transform: scale(1.03);
+}
+
+.part4 {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.part4 p {
+  color: rgb(245, 152, 12);
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "poppins";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.part4 form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.part4 input {
+  border-radius: 15px;
+  border: none;
+  height: 20px;
+  font-family: "poppins";
+  font-weight: bold;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.part4 input:focus {
+  outline: none;
+}
+
+.part4 button {
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(255, 188, 86);
+  padding: 2px 15px;
+  width: max-content;
+  margin: auto;
+  font-family: "poppins";
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(36, 35, 35);
+  transition: 0.4s ease-in-out;
+}
+
+.part4 button:hover {
+  background-color: rgb(245, 152, 12);
+  cursor: pointer;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  height: 80vh;
+  box-shadow: 2px 4px 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.login h2 {
+  font-size: 31px;
+  font-family: "Poppins";
+  margin: 20px;
+  text-align: center;
+  color: black;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  font-family: "Poppins";
+  color: black;
+  font-weight: bold;
+}
+
+.login form input {
+  margin-bottom: 30px;
+  padding-left: 8px;
+  font-family: "poppins";
+  border-radius: 15px;
+  border: none;
+  width: 40%;
+  height: 30px;
+  font-weight: bold;
+}
+
+.login form input:focus {
+  outline: none;
+  background-color: lightblue;
+}
+
+.login button {
+  font-size: 14px;
+  font-family: "poppins";
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 20px;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.login button:hover {
+  color: black;
+  background-color: rgb(21, 110, 194);
+  box-shadow: 2px 2px 6px black;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.login form a {
+  text-decoration: none;
+  color: white;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+  transition: 0.4s ease-in-out;
+}
+
+.login form a:hover {
+  text-decoration: underline;
+  color: black;
+  transform: scale(1.02);
+  font-weight: bold;
+}
+
+.message {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  font-style: italic;
+  padding: 30px;
+  margin: 0;
+}
+
+#user-type {
+  margin: 10px 0px 20px 0px;
+  border-radius: 10px;
+  height: 25px;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+#user-type:focus {
+  outline: none;
+}
+
+#user-type option {
+  font-weight: bold;
+}
+
+.contact-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  height: 80vh;
+  background-color: rgb(21, 110, 194);
+}
+
+.contact-part1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  font-family: "poppins";
+  font-weight: bold;
+  color: white;
+}
+
+.contact-header h1 {
+  margin: 0;
+}
+
+.contact-header p {
+  margin: 10px 0px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+  gap: 40px;
+}
+
+.contact-info p {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 20px;
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+.contact-info img {
+  height: 24px;
+}
+
+.contact-part2 {
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(245, 152, 12);
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+.contact-part2 h1 {
+  margin: 0;
+  font-family: "poppins";
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contact-part2 form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-part2 input {
+  border: none;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 8px;
+  font-family: "poppins";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-part2 input:focus {
+  outline: none;
+}
+
+.contact-part2 button {
+  margin-top: 15px;
+  font-family: "poppins";
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  margin: auto;
+  margin-top: 15px;
+  padding: 3px 10px;
+  border-radius: 15px;
+  transition: 0.4s ease-in-out;
+}
+
+.contact-part2 button:hover {
+  box-shadow: 2px 4px 8px black;
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgb(245, 152, 12);
+}
+
+.about-div {
+  height: 80vh;
+  background-color: rgb(245, 152, 12);
+  font-family: "poppins";
+  overflow: hidden auto;
+}
+
+.about-div h1 {
+  margin: 0;
+  color: black;
+  padding: 25px;
+  font-size: 45px;
+}
+
+.about-div p {
+  padding: 0px 25px;
+  font-weight: bold;
+  line-height: 35px;
+  margin: 0;
+}
