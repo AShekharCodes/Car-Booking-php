@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $query = "INSERT INTO users (name, password, type) VALUES ('$name', '$password_hashed', '$type')";
                 if (mysqli_query($con, $query)) {
                     $message = "User registered successfully!";
+                    $_POST = array();
                 } else {
                     $message = mysqli_error($con);
                 }
@@ -51,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -62,13 +64,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="login">
         <h2>Register yourself</h2>
         <form method="post" id="register">
-            Username <input type="text" name="name" id="name" placeholder="Choose you username">
-            Password <input type="password" name="password" id="password" placeholder="Choose your password">
+            Username <input type="text" name="name" id="name" placeholder="Choose you username"
+                value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '' ?>">
+            Password <input type="password" name="password" id="password" placeholder="Choose your password"
+                value="<?php echo isset($_POST['password']) ? htmlspecialchars($_POST['password']) : '' ?>">
             <label for="user-type">Select User Type</label>
             <select id="user-type" name="user-type">
                 <option value="">Select</option>
-                <option value="customer">Customer</option>
-                <option value="agency">Agency</option>
+                <option value="customer" <?php if (isset($_POST['user-type']) && $_POST['user-type'] === 'customer')
+                    echo 'selected'; ?>>Customer</option>
+                <option value="agency" <?php if (isset($_POST['user-type']) && $_POST['user-type'] === 'agency')
+                    echo 'selected'; ?>>Agency</option>
             </select>
 
             <button type="submit" id="submit">Register</button>
